@@ -1,12 +1,9 @@
 /// <reference types="Cypress"/>
 describe('Teste Funcional de Login e-commerce', () => {
 
-    it('Validar Login com sucesso', () => {
-        cy.visit('https://www.saucedemo.com/v1/')
-        cy.get('[data-test="username"]').type('standard_user')
-        cy.get('[data-test="password"]').type('secret_sauce')
-        cy.get('#login-button').click()
-        cy.contains('Products').should('be.visible')    
+    it.only('Validar Login com sucesso', () => {
+      cy.login_teste()
+      cy.contains('Products').should('be.visible')    
     });
 
     it('Validar Login incorreto', () => {
