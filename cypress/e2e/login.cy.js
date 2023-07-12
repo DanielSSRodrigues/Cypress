@@ -1,7 +1,9 @@
 /// <reference types="Cypress"/>
 describe('Teste Funcional de Login e-commerce', () => {
+    
+      
+      it.only('Validar Login com sucesso', () => {
 
-    it.only('Validar Login com sucesso', () => {
       cy.login_teste()
       cy.contains('Products').should('be.visible')    
     });
